@@ -1,0 +1,11 @@
+[package]
+name = "postscript-core"
+description = "PostScript tokenizer/parser producing the token/cst stream for the typed Model::Program (parity with the Ruby lexer + ast_builder)"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+thiserror = { workspace = true }

@@ -1,0 +1,20 @@
+= postscript-rs
+
+Rust workspace for the PostScript parser — the native core for the
+https://github.com/claricle/postscript[postscript] gem, mirroring the
+https://github.com/parsanol/parsanol-rs[parsanol rust/ruby pair]
+structure.
+
+== Crates
+
+* `postscript-core` — tokenizer/parser producing the token stream the
+  gem's AST builder consumes (parity gate: byte-for-byte token-stream
+  equality with the Ruby lexer across the postscript spec corpus)
+* `postscript-ffi` — C ABI surface for the postscript gem's binding
+
+== Plan
+
+claricle/postscript#4 tracks the extraction: the PS grammar (PARG),
+the native parser, and the postscript gem incorporating this workspace
+with the hand-written Ruby lexer as the pure-Ruby fallback until
+parity is proven.

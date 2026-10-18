@@ -1,0 +1,14 @@
+[package]
+name = "postscript-ffi"
+description = "C ABI surface for postscript-core (FFI consumers: the postscript gem binding)"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+postscript-core = { path = "../postscript-core" }
